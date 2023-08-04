@@ -1,0 +1,5 @@
+# Directories
+.DS_Store
+.vscode/
+Sandbox/build
+GenesisX/build
