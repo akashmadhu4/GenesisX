@@ -1,0 +1,3 @@
+[submodule "GenesisX/lib/spdlog"]
+	path = GenesisX/lib/spdlog
+	url = git@github.com:gabime/spdlog.git

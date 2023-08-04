@@ -1,4 +1,3 @@
-
 namespace GenesisX
 {
 
