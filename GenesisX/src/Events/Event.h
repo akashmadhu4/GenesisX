@@ -1,8 +1,5 @@
 #pragma once
 
-#include <string>
-#include <functional>
-
 #define BIT(x) (1 << x)
 
 namespace GenesisX

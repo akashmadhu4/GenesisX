@@ -13,6 +13,8 @@ file(GLOB SRC_FILES "src/*.cpp")
 
 add_library(GenesisX SHARED ${SRC_FILES})
 
+target_precompile_headers(GenesisX PRIVATE "src/pch.h")
+
 message("CMAKE_CURRENT_SOURCE_DIR:${CMAKE_CURRENT_SOURCE_DIR}")
 
 target_include_directories(GenesisX PRIVATE 
