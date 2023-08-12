@@ -1,3 +1,6 @@
 [submodule "GenesisX/lib/spdlog"]
 	path = GenesisX/lib/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "GenesisX/lib/GLFW"]
+	path = GenesisX/lib/GLFW
+	url = git@github.com:glfw/glfw.git

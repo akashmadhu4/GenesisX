@@ -24,6 +24,14 @@ namespace GenesisX
 #define GZ_CORE_WARN(...) ::GenesisX::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define GZ_CORE_ERROR(...) ::GenesisX::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define GZ_CORE_FATAL(...) ::GenesisX::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define GZ_CORE_ASSERT(x, ...)                                  \
+    {                                                           \
+        if (!(x))                                               \
+        {                                                       \
+            GZ_CORE_ERROR("Assertion Failed:{0}", __VA_ARGS__); \
+            __builtin_debugtrap();                              \
+        }                                                       \
+    }
 
 // Client log macros
 #define GZ_TRACE(...) ::GenesisX::Log::GetClientLogger()->trace(__VA_ARGS__)
@@ -31,3 +39,11 @@ namespace GenesisX
 #define GZ_WARN(...) ::GenesisX::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define GZ_ERROR(...) ::GenesisX::Log::GetClientLogger()->error(__VA_ARGS__)
 #define GZ_FATAL(...) ::GenesisX::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define GZ_ASSERT(x, ...)                                  \
+    {                                                      \
+        if (!(x))                                          \
+        {                                                  \
+            GZ_ERROR("Assertion Failed:{0}", __VA_ARGS__); \
+            __builtin_debugtrap();                         \
+        }                                                  \
+    }

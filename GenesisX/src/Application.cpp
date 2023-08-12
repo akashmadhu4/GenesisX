@@ -1,12 +1,17 @@
+#define GL_SILENCE_DEPRECATION
+#include <OpenGL/gl.h>
 #include "Application.h"
 #include <Events/ApplicationEvent.h>
-#include <Log.h>
+#include <GLFW/glfw3.h>
 
 namespace GenesisX
 {
 
     Application::Application()
     {
+
+        m_Window = std::unique_ptr<Window>(Window::Create());
+        // m_Window->SetEventCallback()
     }
 
     Application::~Application()
@@ -15,18 +20,13 @@ namespace GenesisX
 
     void Application::Run()
     {
-        printf("Welcome to GenesisX Game Engine\n");
-        WindowResizeEvent e(1280, 720);
-        if (e.IsInCategory(EventCategoryApplication))
+
+        while (m_Running)
         {
-            GZ_TRACE(e);
+            glClearColor(1, 0, 1, 1);
+            glClear(GL_COLOR_BUFFER_BIT);
+            m_Window->OnUpdate();
         }
-        if (e.IsInCategory(EventCategoryInput))
-        {
-            GZ_TRACE(e);
-        }
-        while (true)
-            ;
     }
 
 }
