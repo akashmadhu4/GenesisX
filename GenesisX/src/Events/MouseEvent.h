@@ -66,6 +66,7 @@ namespace GenesisX
         {
             std::stringstream ss;
             ss << "MouseButtonPressedEvent:" << m_Button;
+            return ss.str();
         }
         EVENT_CLASS_TYPE(MouseButtonPressed)
     };
@@ -78,6 +79,7 @@ namespace GenesisX
         {
             std::stringstream ss;
             ss << "MouseButtonReleasedEvent: " << m_Button;
+            return ss.str();
         }
         EVENT_CLASS_TYPE(MouseButtonReleased)
     };
