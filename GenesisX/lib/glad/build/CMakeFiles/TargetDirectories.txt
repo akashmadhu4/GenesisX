@@ -1,0 +1,3 @@
+/Users/akashmadhu/dev/GenesisX/lib/glad/build/CMakeFiles/Glad.dir
+/Users/akashmadhu/dev/GenesisX/lib/glad/build/CMakeFiles/edit_cache.dir
+/Users/akashmadhu/dev/GenesisX/lib/glad/build/CMakeFiles/rebuild_cache.dir

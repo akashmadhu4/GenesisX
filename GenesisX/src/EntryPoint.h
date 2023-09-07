@@ -1,3 +1,5 @@
+#include "Log.h"
+
 extern GenesisX::Application *GenesisX::CreateApplication();
 
 int main(int argc, char **argv)
